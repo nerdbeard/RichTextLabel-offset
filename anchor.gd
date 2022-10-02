@@ -41,6 +41,9 @@ class RichTextAnchor:
 		return true
 
 func _ready():
+	# The [anchor] tag has the same effect as the [url] tag on the
+	# character offsets, but commenting out the following line does
+	# not fix the character offsets
 	install_effect(RichTextAnchor.new())
 	meta_clicked.connect(_on_meta_clicked)
 	text = test_text
